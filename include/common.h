@@ -4,6 +4,8 @@
 #define ERROR_INVALID_DATA 0       // Dữ liệu không hợp lệ (Trùng số tài khoản, số âm,...)[cite: 1, 2]
 #define ERROR_MEMORY_FULL -1       // Lỗi cấp phát bộ nhớ động (realloc/malloc thất bại)[cite: 1, 2]
 #define ERROR_INSUFFICIENT_BALANCE -2
+#define ERROR_DUPLICATE_ACCOUNT -3      // Trùng số tài khoản
+#define ERROR_NOT_FOUND -4              // Không tìm thấy tài khoản
 
 typedef struct {         // Khai báo cấu trúc Account (Đại diện cho một Tài khoản ngân hàng)
     char accountNumber[20]; // Mảng ký tự lưu mã tài khoản (Ví dụ: "ACC001")
