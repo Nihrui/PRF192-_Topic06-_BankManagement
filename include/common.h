@@ -1,5 +1,9 @@
 #ifndef COMMON_H         // Kiểm tra nếu COMMON_H chưa được định nghĩa thì mới biên dịch khối bên dưới
 #define COMMON_H         // Định nghĩa COMMON_H để chống lỗi định nghĩa lặp lại khi include nhiều lần
+#define SUCCESS 1                  // Thực hiện thành công
+#define ERROR_INVALID_DATA 0       // Dữ liệu không hợp lệ (Trùng số tài khoản, số âm,...)[cite: 1, 2]
+#define ERROR_MEMORY_FULL -1       // Lỗi cấp phát bộ nhớ động (realloc/malloc thất bại)[cite: 1, 2]
+#define ERROR_INSUFFICIENT_BALANCE -2
 
 typedef struct {         // Khai báo cấu trúc Account (Đại diện cho một Tài khoản ngân hàng)
     char accountNumber[20]; // Mảng ký tự lưu mã tài khoản (Ví dụ: "ACC001")
