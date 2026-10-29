@@ -5,9 +5,12 @@
 #include "common.h"
 #include "transaction.h"
 
-#define TX_ID_FORMAT   "TXN%04d"                 // Định dạng mã giao dịch (TXN0001, TXN0002, ...)
-#define TX_TIME_FORMAT "%Y-%m-%d %H:%M:%S"       // Định dạng thời gian của giao dịch
-#define TX_LOG_FORMAT  "%s|%s|%s|%s|%.2f|%s\n"   // Định dạng một dòng trong tệp log
+#define TX_ID_FORMAT   "TXN%04d"                 
+// Định dạng mã giao dịch (TXN0001, TXN0002, ...)
+#define TX_TIME_FORMAT "%Y-%m-%d %H:%M:%S"       
+// Định dạng thời gian của giao dịch
+#define TX_LOG_FORMAT  "%s|%s|%s|%s|%.2f|%s\n"   
+// Định dạng một dòng trong tệp log
  
 /* Nguyên mẫu các hàm nội bộ (chỉ dùng trong file này) */
 static int  tm_countLogLines(void);
