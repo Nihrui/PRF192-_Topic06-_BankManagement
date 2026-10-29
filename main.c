@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "common.h"
-#include "account.h"     /* nguyên mẫu phân hệ Account (trước main) */
+#include "account.h"     
 
 /* ==================== NGUYÊN MẪU HÀM (TRƯỚC main) ==================== */
 
@@ -24,7 +24,7 @@ void ui_printResult(int code);
 void ui_printAccount(const Account *acc);
 void ui_printSearchResults(const AccountManager *am, const int *indexes, int found);
 
-/* --- Hằng số: không dùng magic number --- */
+
 #define MENU_NONE          (-1)
 #define MENU_EXIT          0
 #define MENU_OPEN_ACCOUNT  1
@@ -35,7 +35,6 @@ void ui_printSearchResults(const AccountManager *am, const int *indexes, int fou
 #define MENU_LOAD          6
 #define MAX_SEARCH_RESULTS 50
 
-/* ==================== ĐỊNH NGHĨA main (các hàm khác định nghĩa SAU main) ==================== */
 int main(void) {
     AccountManager am;
     int choice = MENU_NONE;

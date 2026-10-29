@@ -4,7 +4,16 @@
 #include "common.h"
 #include "account.h"   
 
-static int am_findAccountIndex(const AccountManager *am, const char *accNum);
+static int am_findAccountIndex(const AccountManager *am, const char *accNum) {
+    int i;
+
+    if (am == NULL || accNum == NULL) return -1;
+    for (i = 0; i < am->count; i++) {
+        if (strcmp(am->accounts[i].accountNumber, accNum) == 0) return i;
+    }
+    return -1;
+}
+
 
 /*========================================== OPEN ACCOUNT ==========================================*/
 int am_openAccount(AccountManager *am, const Account *newAcc) {
@@ -80,15 +89,4 @@ void am_freeAccounts(AccountManager *am) {
     free(am->accounts);   
     am->accounts = NULL;
     am->count = 0;
-}
-
-/*====================================== HÀM NỘI BỘ (cuối file) ===================================*/
-static int am_findAccountIndex(const AccountManager *am, const char *accNum) {
-    int i;
-
-    if (am == NULL || accNum == NULL) return -1;
-    for (i = 0; i < am->count; i++) {
-        if (strcmp(am->accounts[i].accountNumber, accNum) == 0) return i;
-    }
-    return -1;
 }
